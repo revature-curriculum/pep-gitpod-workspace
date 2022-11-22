@@ -1,18 +1,5 @@
 # build the project
 tasks:
-  - name: Setup maven
-    init: mvn install
-  - name: Setup Mysql  
-    init: docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=Pass123$ -d mysql:5.7 && sudo apt install maven && docker exec -it some-mysql  mysql -uroot -pPass123$
-  - name: Open Readme
-    init: gp open README.md
-  - name: Setup revpro CLI
-    init: |
-      git clone https://github.com/revature-curriculum/revpro-cli
-      cd revpro-cli
-      bundle
-      bundle exec rake:install
-  - name: Clone pep-labs
-    init: | 
-      revpro start aviflombaum/pep-labs
-      cd pep-labs
+  - name: Setup PEP Workspace
+    init: >
+      ruby /workspace/pep-gitpod-workspace/.setup.rb
