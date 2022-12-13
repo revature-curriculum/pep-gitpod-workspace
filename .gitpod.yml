@@ -1,5 +1,5 @@
 # build the project
 tasks:
   - name: Setup PEP Workspace
-    init: >
-      ruby /workspace/pep-gitpod-workspace/.setup.rb
+    command: >
+      source /workspace/pep-gitpod-workspace/.setup_workspace.sh
