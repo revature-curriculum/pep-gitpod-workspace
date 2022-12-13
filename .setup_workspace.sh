@@ -1,29 +1,22 @@
 #!/bin/bash
-
-if [[ ! -f "/workspace/.revpro-cli-setup" ]] ;
+if [[ -d "/home/gitpod/.rvm/gems/ruby-3.1.2/gems/revpro-cli-0.1.1" && -d "/workspace/revpro-cli" ]]
 then
-echo "/workspace/.revpro-cli-setup does not exist"
+echo "No need to run setup. Ready to go!"
+exit 0
+fi
 
+
+if [[ ! -d "/workspace/revpro-cli" ]] ;
+then
+echo "/workspace/revpro-cli does not exist. Cloning..."
 git clone https://github.com/revature-curriculum/revpro-cli /workspace/revpro-cli
 echo "Repo cloned to /workspace/revpro-cli"
+fi
 
 cd /workspace/revpro-cli
 echo "Changed to /workspace/revpro-cli directory"
 
-touch /workspace/.revpro-cli-setup
 bundle install
 rake install
 echo "Installed all dependencies."
-
-else
-# This will be printed if condition if False
-echo "/workspace/.revpro-cli-setup exists"
-fi
-
-if [[ ! -f "/workspace/.pep-labs-started" ]] ;
-then
-echo "/workspace/.pep-labs-started does not exist"
-touch /workspace/.pep-labs-started
-else
-echo "/workspace/.pep-labs-started exists"
-fi
+echo "Your workspace is ready. Happy coding!"
