@@ -2,7 +2,12 @@
 
 if !File.exists?("/workspace/.revpro-cli-setup")
   system("git clone https://github.com/revature-curriculum/revpro-cli /workspace/revpro-cli")
-  system("cd /workspace/revpro-cli && bundle install && rake install")
+  system("echo \"Repo cloned to /workspace/revpro-cli\"")
+  system("bundle install")
+  system("rake install")
+  system("echo \"Installed all dependencies.\"")
+  system("cd /workspace/revpro-cli")
+  system("echo \"Changed to /workspace/revpro-cli directory\"")
   system("touch /workspace/.revpro-cli-setup")
 end
 
