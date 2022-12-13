@@ -2,4 +2,4 @@
 tasks:
   - name: Setup PEP Workspace
     init: >
-      sh /workspace/pep-gitpod-workspace/.setup_workspace.sh
+      bash /workspace/pep-gitpod-workspace/.setup_workspace.sh
