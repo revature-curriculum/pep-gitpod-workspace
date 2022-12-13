@@ -1,10 +1,4 @@
 #!/bin/bash
-if [[ -d "/home/gitpod/.rvm/gems/ruby-3.1.2/gems/revpro-cli-0.1.1" && -d "/workspace/revpro-cli" ]]
-then
-echo "No need to run setup. Ready to go!"
-exit 0
-fi
-
 
 if [[ ! -d "/workspace/revpro-cli" ]] ;
 then
