@@ -1,4 +1,4 @@
-github_username = ENV["HOSTNAME"].split("-").first
+# github_username = ENV["HOSTNAME"].split("-").first
 
 if !File.exists?("/workspace/.revpro-cli-setup")
   system("git clone https://github.com/revature-curriculum/revpro-cli /workspace/revpro-cli")
@@ -7,7 +7,9 @@ if !File.exists?("/workspace/.revpro-cli-setup")
 end
 
 if !File.exists?("/workspace/.pep-labs-started")
-  system("revpro start https://github.com/#{github_username}/pep-labs /workspace/pep-labs")
+  # system("revpro start https://github.com/#{github_username}/pep-labs /workspace/pep-labs")
   system("touch /workspace/.pep-labs-started")
-  system("cd /workspace/pep-labs && revpro open Intro_To_Java/Start")
+  # if File.exists?("/workspace/pep-labs/.codelab/revpro.yml")
+  #   system("cd /workspace/pep-labs && revpro open Start")
+  # end
 end
