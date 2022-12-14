@@ -15,7 +15,7 @@ echo "Installed all dependencies."
 
 
 
-if [[ ! -d "/workspace/revpro-cli/pep-labs" ]] ;
+if [[ -d "/workspace/revpro-cli/pep-labs" ]] ;
 then
 cd /workspace/revpro-cli/pep-labs
 echo "Changed to /workspace/revpro-cli/pep-labs directory"
