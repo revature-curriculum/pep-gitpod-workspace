@@ -3,3 +3,6 @@ tasks:
   - name: Workspace Setup
     command: >
       source /workspace/pep-gitpod-workspace/.setup_workspace.sh
+vscode:
+  extensions:
+    - vscjava.vscode-java-pack
