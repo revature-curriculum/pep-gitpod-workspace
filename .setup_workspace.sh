@@ -13,7 +13,7 @@ bundle install
 rake install
 echo "Installed all dependencies."
 
-export REVPRO_CLI_REPORT_HOST=https://res-app-web-staging-pr-39.onrender.com
+export REVPRO_CLI_REPORT_HOST=https://res-app-web-staging-pr-41.onrender.com
 
 if [[ -d "/workspace/revpro-cli/pep-labs" ]] ;
 then
