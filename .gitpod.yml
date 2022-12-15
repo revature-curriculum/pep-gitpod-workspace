@@ -1,5 +1,5 @@
 # build the project
 tasks:
-  - name: Setup PEP Workspace
+  - name: Workspace Setup
     command: >
       source /workspace/pep-gitpod-workspace/.setup_workspace.sh
