@@ -9,6 +9,8 @@ fi
 
 cd /workspace/revpro-cli
 
+git pull
+
 bundle install
 rake install
 echo "Installed all dependencies."
