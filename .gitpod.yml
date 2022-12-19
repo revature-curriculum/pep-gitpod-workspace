@@ -2,10 +2,8 @@
 tasks:
   - name: Workspace Setup
     command: >
-      source /workspace/pep-gitpod-workspace/.setup_workspace.sh
-  - name: Autocompletion
-    command: >
-      source /workspace/pep-gitpod-workspace/revpro-autocomplete.sh
+      source /workspace/pep-gitpod-workspace/.setup_workspace.sh;
+      source /workspace/pep-gitpod-workspace/revpro-autocomplete.sh;
 vscode:
   extensions:
     - vscjava.vscode-java-pack
