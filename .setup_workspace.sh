@@ -27,3 +27,4 @@ echo "Changed to /workspace/revpro-cli directory"
 fi
 
 echo "Your workspace is ready. Happy coding!"
+echo "HI"
