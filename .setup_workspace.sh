@@ -8,6 +8,7 @@ echo "Repo cloned to /workspace/revpro-cli"
 fi
 
 cd /workspace/revpro-cli
+git checkout cli-test
 
 git pull
 
@@ -15,7 +16,9 @@ bundle install
 rake install
 echo "Installed all dependencies."
 
-export REVPRO_CLI_REPORT_HOST=https://res.revatu.re
+echo "source /workspace/pep-gitpod-workspace/revpro-autocomplete.sh;" >> ~/.bashrc
+
+export REVPRO_CLI_REPORT_HOST=https://staging.res.revatu.re
 
 if [[ -d "/workspace/revpro-cli/pep-labs" ]] ;
 then
