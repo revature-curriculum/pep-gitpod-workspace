@@ -1,5 +1,8 @@
 #!/bin/bash
 
+cd /workspace/pep-gitpod-workspace
+git pull -X theirs
+
 if [[ ! -d "/workspace/revpro-cli" ]] ;
 then
 echo "/workspace/revpro-cli does not exist. Cloning..."
@@ -10,7 +13,7 @@ fi
 cd /workspace/revpro-cli
 git checkout cli-test
 
-git pull
+git pull -X theirs
 
 bundle install
 rake install
