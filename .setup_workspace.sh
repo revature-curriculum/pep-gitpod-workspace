@@ -20,6 +20,8 @@ rake install
 echo "Installed all dependencies."
 
 echo "source /workspace/pep-gitpod-workspace/revpro-autocomplete.sh;" >> ~/.bashrc
+echo "export REVPRO_CLI_REPORT_HOST=https://staging.res.revatu.re" >> ~/.bashrc
+source ~/.bashrc
 
 export REVPRO_CLI_REPORT_HOST=https://staging.res.revatu.re
 
