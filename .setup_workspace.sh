@@ -20,10 +20,10 @@ rake install
 echo "Installed all dependencies."
 
 echo "source /workspace/pep-gitpod-workspace/revpro-autocomplete.sh;" >> ~/.bashrc
-echo "export REVPRO_CLI_REPORT_HOST=https://staging.res.revatu.re" >> ~/.bashrc
+echo "export REVPRO_CLI_REPORT_HOST=https://res.revatu.re" >> ~/.bashrc
 source ~/.bashrc
 
-export REVPRO_CLI_REPORT_HOST=https://staging.res.revatu.re
+export REVPRO_CLI_REPORT_HOST=https://res.revatu.re
 
 if [[ -d "/workspace/revpro-cli/pep-labs" ]] ;
 then
