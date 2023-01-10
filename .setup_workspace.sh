@@ -1,5 +1,8 @@
 #!/bin/bash
 
+cd /workspace/pep-gitpod-workspace
+git pull -X theirs
+
 if [[ ! -d "/workspace/revpro-cli" ]] ;
 then
 echo "/workspace/revpro-cli does not exist. Cloning..."
@@ -8,12 +11,17 @@ echo "Repo cloned to /workspace/revpro-cli"
 fi
 
 cd /workspace/revpro-cli
+git checkout cli-test
 
-git pull
+git pull -X theirs
 
 bundle install
 rake install
 echo "Installed all dependencies."
+
+echo "source /workspace/pep-gitpod-workspace/revpro-autocomplete.sh;" >> ~/.bashrc
+echo "export REVPRO_CLI_REPORT_HOST=https://res.revatu.re" >> ~/.bashrc
+source ~/.bashrc
 
 export REVPRO_CLI_REPORT_HOST=https://res.revatu.re
 
